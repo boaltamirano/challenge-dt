@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/persona','App\Http\Controllers\PersonaController@index'); //Todos los registros
+Route::get('/persona/{id}','App\Http\Controllers\PersonaController@show');
